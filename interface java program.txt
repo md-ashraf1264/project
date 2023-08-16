@@ -1,0 +1,36 @@
+interface Computer
+{
+    void compilecode();
+}
+class Laptop implements Computer
+{
+   public  void compilecode()
+    {
+        System.out.println("Laptop works");
+    }
+}
+class Desktop implements Computer
+{
+    public void compilecode()
+    {
+        System.out.println("Desktop works");
+    }
+}
+class Developer
+{
+    public void show(Computer obj)
+    {
+        System.out.println("Developer needs ");
+        obj.compilecode();
+    }
+}
+class Main
+{
+    public static void main(String args[])
+    {
+        Computer obj = new Laptop();
+        Developer dev = new Developer ();
+        dev.show(obj);
+       
+    }
+}
