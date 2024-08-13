@@ -1,0 +1,25 @@
+class Ashraf{
+  public static int FindElement(int arr[], int low , int high,  int x)
+  { 
+    int result= -1;
+    while(low<= high)
+    {
+           int mid = low + (high-low)/2;
+           if(arr[mid] ==x ){
+            return mid;
+           }
+          else if(mid>x)low = mid +1;
+          else high = mid-1;
+          }
+          return result;
+  }
+  public static void main(String args[])
+  { 
+    int arr[]  = {12,23,45,56,78,89};
+    int x = 45;
+    int low  =0;
+    int high = arr.length-1; 
+    int result = FindElement(arr, low, high, x);
+    System.out.println(result);
+  }
+}
